@@ -10,4 +10,14 @@
 
 @implementation JDFTableRow
 
+- (instancetype)initWithTitle:(NSString *)title rowType:(JDFRowType)rowType
+{
+    self = [super init];
+    if (self) {
+        self.title = title;
+        self.rowType = rowType;
+    }
+    return self;
+}
+
 @end

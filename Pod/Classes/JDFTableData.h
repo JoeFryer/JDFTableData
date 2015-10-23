@@ -9,10 +9,19 @@
 #import <Foundation/Foundation.h>
 
 // JDFTableData
-#import "JDFTableSection.h"
 #import "JDFTableRow.h"
+#import "JDFTableSection.h"
 
 
 @interface JDFTableData : NSObject
+
+#pragma mark - Init
+- (instancetype)initWithSections:(NSArray *)sections;
+
+#pragma mark - Data
+@property (nonatomic) NSArray *sections;
+
+#pragma mark - Retrieving Rows
+- (JDFTableRow *)tableRowForIndexPath:(NSIndexPath *)indexPath;
 
 @end
