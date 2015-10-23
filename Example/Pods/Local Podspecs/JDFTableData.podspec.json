@@ -1,0 +1,25 @@
+{
+  "name": "JDFTableData",
+  "version": "0.1.0",
+  "summary": "A short description of JDFTableData.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/JDFTableData",
+  "license": "MIT",
+  "authors": {
+    "Joe Fryer": "joe.d.fryer@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/JDFTableData.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "JDFTableData": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

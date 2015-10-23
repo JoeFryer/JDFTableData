@@ -1,0 +1,6 @@
+framework module JDFTableData {
+  umbrella header "JDFTableData-umbrella.h"
+
+  export *
+  module * { export * }
+}

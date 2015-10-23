@@ -1,0 +1,6 @@
+framework module Pods_JDFTableData_Tests {
+  umbrella header "Pods-JDFTableData_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
