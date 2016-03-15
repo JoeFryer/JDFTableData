@@ -63,7 +63,7 @@
 
 - (BOOL)addTableRowsWithTitles:(NSArray *)titles subtitles:(NSArray *)subtitles dataStrings:(NSArray *)dataStrings primaryImages:(NSArray *)primaryImages rowType:(JDFRowType)rowType
 {
-    NSArray *newTableItems = [JDFTableSection arrayOfTableRowsWithTitles:titles subtitles:subtitles primaryImages:primaryImages dataStrings:dataStrings withRowType:rowType];
+    NSArray *newTableItems = [JDFTableSection tableRowsWithTitles:titles subtitles:subtitles primaryImages:primaryImages dataStrings:dataStrings withRowType:rowType];
     if (newTableItems) {
         NSMutableArray *tableItems = [self.rows mutableCopy];
         [tableItems addObjectsFromArray:newTableItems];
@@ -74,7 +74,7 @@
     }
 }
 
-+ (NSArray *)arrayOfTableRowsWithTitles:(NSArray *)titles subtitles:(NSArray *)subtitles primaryImages:(NSArray *)primaryImages dataStrings:(NSArray *)dataStrings withRowType:(JDFRowType)rowType
++ (NSArray *)tableRowsWithTitles:(NSArray *)titles subtitles:(NSArray *)subtitles primaryImages:(NSArray *)primaryImages dataStrings:(NSArray *)dataStrings withRowType:(JDFRowType)rowType
 {
     NSParameterAssert(titles);
     
