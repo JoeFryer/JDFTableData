@@ -22,7 +22,7 @@
 }
 
 
-#pragma mark - Retrieving Rows
+#pragma mark - Retrieving Table Data
 
 - (JDFTableRow *)tableRowForIndexPath:(NSIndexPath *)indexPath
 {
@@ -40,6 +40,17 @@
         return nil;
     }
     return row;
+}
+
+- (NSInteger)numberOfSections
+{
+    return self.sections.count;
+}
+
+- (NSInteger)numberOfRowsInSection:(NSInteger)section
+{
+    JDFTableSection *tableSection = self.sections[section];
+    return [tableSection numberOfRows];
 }
 
 @end

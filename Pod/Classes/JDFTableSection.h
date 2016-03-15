@@ -32,6 +32,8 @@
 - (BOOL)addTableRowsWithTitles:(NSArray *)titles subtitles:(NSArray *)subtitles primaryImages:(NSArray *)primaryImages rowType:(JDFRowType)rowType;
 - (BOOL)addTableRowsWithTitles:(NSArray *)titles subtitles:(NSArray *)subtitles dataStrings:(NSArray *)dataStrings rowType:(JDFRowType)rowType;
 - (BOOL)addTableRowsWithTitles:(NSArray *)titles subtitles:(NSArray *)subtitles dataStrings:(NSArray *)dataStrings primaryImages:(NSArray *)primaryImages rowType:(JDFRowType)rowType;
+- (BOOL)addTableRow:(JDFTableRow *)tableRow;
+- (BOOL)addTableRows:(NSArray<JDFTableRow *> *)tableRows;
 + (NSArray *)tableRowsWithTitles:(NSArray *)titles subtitles:(NSArray *)subtitles primaryImages:(NSArray *)primaryImages dataStrings:(NSArray *)dataStrings withRowType:(JDFRowType)rowType;
 
 @end

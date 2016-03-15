@@ -64,9 +64,22 @@
 - (BOOL)addTableRowsWithTitles:(NSArray *)titles subtitles:(NSArray *)subtitles dataStrings:(NSArray *)dataStrings primaryImages:(NSArray *)primaryImages rowType:(JDFRowType)rowType
 {
     NSArray *newTableItems = [JDFTableSection tableRowsWithTitles:titles subtitles:subtitles primaryImages:primaryImages dataStrings:dataStrings withRowType:rowType];
-    if (newTableItems) {
+    return [self addTableRows:newTableItems];
+}
+
+- (BOOL)addTableRow:(JDFTableRow *)tableRow
+{
+    if (tableRow && [tableRow isKindOfClass:[JDFTableRow class]]) {
+        return [self addTableRows:@[tableRow]];
+    }
+    return NO;
+}
+
+- (BOOL)addTableRows:(NSArray<JDFTableRow *> *)tableRows
+{
+    if (tableRows) {
         NSMutableArray *tableItems = [self.rows mutableCopy];
-        [tableItems addObjectsFromArray:newTableItems];
+        [tableItems addObjectsFromArray:tableRows];
         self.rows = [NSArray arrayWithArray:tableItems];
         return YES;
     } else {
