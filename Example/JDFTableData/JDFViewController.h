@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface JDFViewController : UIViewController
+@interface JDFViewController : UITableViewController
 
 @end
